@@ -1,3 +1,4 @@
+# Write a function getAverage() that will take head of a singly linked list and return the average.
 class Node:
   def __init__(self, data):
     self.data = data
