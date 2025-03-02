@@ -1,3 +1,6 @@
+# Remove the even numbers from the following singly linked list. Write a utility function
+# deleteeven(self) that will delete all even nodes from the singly linedlist
+
 class Node:
   def __init__(self, data):
     self.data = data
