@@ -21,18 +21,6 @@ class DoublyLinkedList:
       new_node.prev = self.tail
       self.tail = new_node
 
-
-  def append_left(self, data):
-    newnode = ListNode(data)
-    if self.head == None:
-      self.head = newnode
-      self.tail = newnode
-    else:
-      newnode.next = self.head
-      self.head.prev = newnode
-      self.head = newnode
-    self.size +=1
-
   def print_all(self):
     current_node = self.head
     while current_node:
@@ -40,41 +28,25 @@ class DoublyLinkedList:
       current_node = current_node.next
     print()
 
-
-  def isSymmetric(self):
-    right = self.head
-    left = self.tail
-
-    while( right and left is not None):
-      if right.data != left.data:
-        return False
-      else:
-        right = right.next
-        left = left.prev
-      
-    if right is not None or left is not None:
-      return False
-    else:
-      return True 
-
+  
+  def delete_3rd_element_from_last(self):
+    current = self.tail
+    for i in range(2):
+      current = current.prev
+    
+    current.prev.next = current.next
+    current.next.prev = current.prev
 
 dll = DoublyLinkedList()
-
-dll.append(1)
+dll.append(5)
 dll.append(2)
 dll.append(3)
+dll.append(7)
+dll.append(4)
+dll.append(9)
 dll.append(2)
-dll.append(1)
+dll.append(6)
 
 dll.print_all()
-print(dll.isSymmetric()) 
-
-dll_2 = DoublyLinkedList()
-dll_2.append(1)
-dll_2.append(2)
-dll_2.append(4)
-dll_2.append(3)
-dll_2.append(1)
-
-dll_2.print_all()
-print(dll_2.isSymmetric()) 
+dll.delete_3rd_element_from_last()
+dll.print_all()
