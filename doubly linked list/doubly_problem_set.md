@@ -13,6 +13,6 @@ Consider a **Doubly Linked List (DLL)** implemented in a `DLL` class. Write a me
 
 For example:  
 - Given the **DLL**:  **head → 1 ↔ 2 ↔ 3 ↔ 2 ↔ 1 ← tail** is symmetric, therefore, the function should return True.
-- But if the **DLL** is, **head → 1 ↔ 2 ↔ 3 ↔ 1 ← tail** is not symmetric, therefore the function should return False.
+- But if the **DLL** is: **head → 1 ↔ 2 ↔ 3 ↔ 1 ← tail** is not symmetric, therefore the function should return False.
 
 
