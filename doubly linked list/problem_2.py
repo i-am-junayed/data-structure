@@ -21,18 +21,6 @@ class DoublyLinkedList:
       new_node.prev = self.tail
       self.tail = new_node
 
-
-  def append_left(self, data):
-    newnode = ListNode(data)
-    if self.head == None:
-      self.head = newnode
-      self.tail = newnode
-    else:
-      newnode.next = self.head
-      self.head.prev = newnode
-      self.head = newnode
-    self.size +=1
-
   def print_all(self):
     current_node = self.head
     while current_node:
