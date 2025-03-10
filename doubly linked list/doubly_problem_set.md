@@ -18,7 +18,7 @@ For example:
 ### Question_3: Insert a Node After a Given Value
 
 Assume, HEAD is the head-node of a doubly linked list (dll). Write a utility function addNodeAfterValue(self, givenValue, newValue) to insert a new value in this dll just after a given value.
--a. If the given value is found in the dll, insert the new value just after the given value.
--b. If the given value is not found, don’t add the node. Just print “Not found”
+-  a. If the given value is found in the dll, insert the new value just after the given value.
+-  b. If the given value is not found, don’t add the node. Just print “Not found”
 
 
