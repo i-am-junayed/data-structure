@@ -21,4 +21,9 @@ Assume, HEAD is the head-node of a doubly linked list (dll). Write a utility fun
 -  a. If the given value is found in the dll, insert the new value just after the given value.
 -  b. If the given value is not found, don’t add the node. Just print “Not found”
 
+### Question_4 : Insert a Node in a Sorted Doubly Linked List
+Given a sorted doubly linked list and a value to insert, write a function to insert the value in sorted way (and in efficient way). 
+-  Initial doubly linked list : **head → 4 ↔ 7 ↔ 12 ↔ 21 ↔ 28 ← tail**
+-  After calling **insertSorted(9)** the list will be as follows: **head → 4 ↔ 7 ↔ 9↔ 12 ↔ 21 ↔ 28 ← tail**
+
 
