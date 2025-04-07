@@ -58,21 +58,23 @@ class BinarySearchTree:
 
 
   # Find the node with the maximum value
-  def find_max2(self):
+  def find_max_value(self):
     current = self.root
     while current.right_child:
         current = current.right_child
     return current.data
     
-  # Find the node with the maximum value using recursion. So basically only this function is the answer of this question. 
-  def find_maxR(self, root):
+  # Find the node with the maximum value using recursion. 
+  # So basically only this function is the answer of this question. 
+  
+  def find_max_using_recursion(self, root):
     if root == None:
       return
 
     if root.right_child == None:
       return root.data
     else:
-      return  self.find_maxR(root.right_child)
+      return  self.find_max_using_recursion(root.right_child)
 
 
 num = [7, 15, 9, 8, 10, 5, 3, 16, 11, 13,  17]
