@@ -86,6 +86,4 @@ print("Inorder with recursion:")
 bst.inorder(bst.root)
 print()
 
-bst.find_maxR(bst.root)
-
-
+bst.find_max_using_recursion(bst.root)
