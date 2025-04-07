@@ -76,7 +76,7 @@ class BinarySearchTree:
     else:
       return  self.find_max_using_recursion(root.right_child)
 
-
+bst = BinarySearchTree()
 num = [7, 15, 9, 8, 10, 5, 3, 16, 11, 13,  17]
 for i in range (0,len(num)):
 
