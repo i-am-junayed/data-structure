@@ -56,21 +56,24 @@ class BinarySearchTree:
       self.postorder(node.right_child)
       print(node.data, end = ", ")
       
-  def print_levels(self):
-    if self.root is None:
-      return
-          
-    current_level = [self.root]
-    while current_level:
-      next_level = []
-      for node in current_level:
-        print(node.data, end=" ")
-        if node.left_child:
-          next_level.append(node.left_child)
-        if node.right_child:
-          next_level.append(node.right_child)
-      print()  # Move to the next line for the next level
-      current_level = next_level
+  def get_height(self):
+      if self.root is None:
+          return 0
+  
+      current_level = [self.root]
+      height = 0
+  
+      while current_level:
+          next_level = []
+          for node in current_level:
+              if node.left_child:
+                  next_level.append(node.left_child)
+              if node.right_child:
+                  next_level.append(node.right_child)
+          current_level = next_level
+          height += 1
+  
+      return height
 
 
 bst = BinarySearchTree()
@@ -94,5 +97,5 @@ for i in range (0,len(num)):
 
 print("Inorder with recursion:")
 bst.inorder(bst.root)
-print("\nLevel wise printing : ")
-bst.print_levels()
+print("\nHeight of the bst : ")
+print(bst.get_height())
